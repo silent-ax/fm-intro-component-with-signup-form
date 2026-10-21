@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+/* =========================
+LAYERS
+========================= */
+@layer reset, base, components, utilities, responsive;
+
+/* =========================
+RESET
+========================= */
+@layer reset {
+  /* =========================================================
+   MODERN CSS RESET
+   Reset de estilos moderno y minimalista para proyectos web
+   ========================================================= */
+
+  /* 1. Uso más intuitivo del box-model en todo el proyecto */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  /* 2. Elimina márgenes y paddings por defecto */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* 3. Permite que los elementos de bloque de tipografía tengan un
+      wrap más agradable y controlado */
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    hanging-punctuation: first last;
+  }
+
+  /* 4. Comportamiento de scroll suave, respetando accesibilidad
+      (ver media query al final) */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* 5. Configuración base del body */
+  body {
+    min-height: 100svh;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeSpeed;
+  }
+
+  /* 6. Mejora la tipografía en encabezados y controla el equilibrio
+      del texto (soportado en navegadores modernos) */
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1.1;
+    /* text-wrap: balance; */
+  }
+
+  p,
+  li,
+  figcaption {
+    text-wrap: pretty;
+  }
+
+  /* 7. Evita que los títulos y textos largos rompan el layout */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  dl,
+  dd {
+    overflow-wrap: break-word;
+  }
+
+  /* 8. Elimina estilos por defecto de listas cuando llevan
+      atributo role (mejora accesibilidad al no perder semántica) */
+  ul[role="list"],
+  ol[role="list"] {
+    list-style: none;
+  }
+
+  /* 9. Los elementos multimedia son responsivos por defecto */
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* 10. Hereda tipografía en formularios (inputs, botones, etc.) */
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+    color: inherit;
+  }
+
+  /* 11. Evita desbordes en textarea y facilita el redimensionado */
+  textarea {
+    resize: vertical;
+  }
+
+  /* 12. Quita estilos por defecto de botones para poder
+       personalizarlos libremente */
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* 13. Enlaces sin estilos de subrayado/color por defecto */
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* 14. Tablas con bordes colapsados y ancho completo por defecto */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  /* 15. Elementos con atributo "hidden" siempre ocultos */
+  [hidden] {
+    display: none !important;
+  }
+
+  /* 16. Mejora el foco visible para accesibilidad con teclado */
+  :focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
+
+  /* 17. Elimina el resaltado táctil azul en móviles (iOS/Android) */
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* 18. Root stacking context, útil para animaciones y overlays */
+  #root,
+  #__next {
+    isolation: isolate;
+  }
+
+  /* 19. Respeta las preferencias de accesibilidad del usuario:
+       reduce animaciones y scroll suave si así lo solicita */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* =========================
+BASE
+========================= */
+@layer base {
+  :root {
+    /* ### Primary */
+    --color-red-400: hsl(0, 100%, 74%);
+    --color-green-400: hsl(154, 59%, 51%);
+
+    /* ### accent */
+    --color-purple-700: hsl(248, 32%, 49%);
+
+    /* ### neutral */
+    --color-gray-900: hsl(249, 10%, 26%);
+    --color-purple-350: hsl(246, 25%, 77%);
+
+    --fz-xs: 0.6rem;
+    --fz-sm: 0.8rem;
+    --fz-nm: 1rem;
+    --fz-lg: 1.5rem;
+    --fz-xl: 2rem;
+    --fz-xxl: 3rem;
+
+    --sp-xxs: 0.25rem;
+    --sp-xs: 0.5rem;
+    --sp-sm: 0.75rem;
+    --sp-nm: 1rem;
+    --sp-lg: 1.5rem;
+    --sp-xl: 2rem;
+    --sp-xxl: 3rem;
+
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-semibold: 600;
+    --weight-bold: 700;
+
+    --font-poppins: "Poppins", sans-serif;
+  }
+
+  body {
+    font-size: 16px;
+    font-family: var(--font-poppins);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* =========================
+COMPONENTS
+========================= */
+@layer components {
+}
+
+/* =========================
+UTILITIES
+========================= */
+@layer utilities {
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+@layer responsive {
+  /* - Mobile: 375px */
+}
