@@ -6,5 +6,172 @@
     <title>Intro Component With Sign Up Form</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- ========================= -->
+    <!-- MAIN -->
+    <!-- ========================= -->
+    <main>
+      <!-- SIGN UP SECTION -->
+      <section class="signup" aria-labelledby="intro-title">
+        <!-- Container -->
+        <div class="signup__container">
+          <!-- ========================= -->
+          <!-- INTRO -->
+          <!-- ========================= -->
+          <section class="signup-intro">
+            <!-- Title -->
+            <h1 class="signup-intro__title" id="intro-title">
+              Learn to code by watching others
+            </h1>
+            <!-- Description -->
+            <p class="signup-intro__description">
+              See how experienced developers solve problems in real-time.
+              Watching scripted tutorials is great, but understanding how
+              developers think is invaluable.
+            </p>
+          </section>
+          <!-- ========================= -->
+          <!-- FORM -->
+          <!-- ========================= -->
+          <section class="signup-form">
+            <!-- Offer -->
+            <p class="signup-form__offer">
+              <strong>Try it free 7 days</strong> then $20/mo. thereafter
+            </p>
+            <!-- Form -->
+            <form class="signup-form__form" action="#" method="post">
+              <!-- ========================= -->
+              <!-- FORM FIELD - FIRSTNAME -->
+              <!-- ========================= -->
+              <div class="form-field">
+                <label
+                  class="form-field__label visually-hidden"
+                  for="first-name"
+                  >First Name</label
+                >
+
+                <input
+                  class="form-field__input"
+                  id="first-name"
+                  name="first-name"
+                  type="text"
+                  placeholder="First Name"
+                  aria-invalid="true"
+                  aria-describedby="first-name-error"
+                  autocomplete="given-name"
+                  required
+                />
+                <p class="form-field__error" id="first-name-error" hidden>
+                  First Name cannot be empty
+                </p>
+                <img
+                  class="form-field__error-icon"
+                  src="./images/icon-error.svg"
+                  alt=""
+                  hidden
+                />
+              </div>
+              <!-- ========================= -->
+              <!-- FORM FIELD - LAST NAME -->
+              <!-- ========================= -->
+              <div class="form-field__field">
+                <label class="form-field__label visually-hidden" for="last-name"
+                  >Last Name</label
+                >
+                <input
+                  class="form-field__input"
+                  id="last-name"
+                  name="last-name"
+                  type="text"
+                  placeholder="Last Name"
+                  aria-invalid="true"
+                  aria-describedby="last-name-error"
+                  autocomplete="family-name"
+                  required
+                />
+                <p class="form-field__error" id="last-name-error" hidden>
+                  Last Name cannot be empty
+                </p>
+                <img
+                  class="form-field__error-icon"
+                  src="./images/icon-error.svg"
+                  alt=""
+                  hidden
+                />
+              </div>
+              <!-- ========================= -->
+              <!-- FORM FIELD - EMAIL ADDRESS -->
+              <!-- ========================= -->
+              <div class="form-field__field">
+                <label class="form-field__label visually-hidden" for="email"
+                  >Email Address</label
+                >
+                <input
+                  class="form-field__input"
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="Email Address"
+                  aria-invalid="true"
+                  aria-describedby="email-error"
+                  autocomplete="email"
+                  required
+                />
+                <p class="form-field__error" id="email-error" hidden>
+                  Email Address cannot be empty
+                </p>
+                <img
+                  class="form-field__error-icon"
+                  src="./images/icon-error.svg"
+                  alt=""
+                  hidden
+                />
+              </div>
+              <!-- ========================= -->
+              <!-- FORM FIELD - PASSWORD -->
+              <!-- ========================= -->
+              <div class="form-field__field">
+                <label class="form-field__label visually-hidden" for="password"
+                  >Password</label
+                >
+                <input
+                  class="form-field__input"
+                  id="password"
+                  name="password"
+                  type="password"
+                  placeholder="Password"
+                  aria-invalid="true"
+                  aria-describedby="password-error"
+                  autocomplete="new-password"
+                  required
+                />
+                <p class="form-field__error" id="password-error" hidden>
+                  Password cannot be empty
+                </p>
+                <img
+                  class="form-field__error-icon"
+                  src="./images/icon-error.svg"
+                  alt=""
+                  hidden
+                />
+              </div>
+
+              <!-- Submit button -->
+              <button class="signup-form__submit" type="submit">
+                Claim your free trial
+              </button>
+
+              <!-- Terms -->
+              <p class="signup-form__terms">
+                By clicking the button, you are agreeing to our
+                <a class="signup-form__terms-link" href="#"
+                  >Terms and Services</a
+                >
+              </p>
+            </form>
+          </section>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
