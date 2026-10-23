@@ -290,17 +290,21 @@ COMPONENTS
   }
   .signup-form__submit {
     background-color: var(--color-green-400);
-    padding: var(--sp-nm) 0;
+    padding: var(--sp-nm) 0 0.8rem;
     text-align: center;
     border-radius: 5px;
     color: var(--color-white);
     text-transform: uppercase;
     font-weight: var(--weight-semibold);
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     border: 1px solid hsl(154, 59%, 45%);
     box-shadow: 0 3px hsl(154, 59%, 45%);
+    &:hover {
+      opacity: 0.8;
+    }
   }
   .signup-form__terms {
+    margin-top: -0.5rem;
     font-size: 0.75rem;
     text-align: center;
     color: rgba(0, 0, 0, 0.5);
@@ -318,27 +322,27 @@ COMPONENTS
   }
   .form-field__label {
   }
+  .form-field__group {
+    position: relative;
+  }
   .form-field__input {
     width: 100%;
     padding: var(--sp-nm) var(--sp-xl);
     outline: none;
-    border: 2px solid rgba(0, 0, 0, 0.1);
+    border: 1.6px solid rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     color: var(--color-gray-900);
     font-weight: var(--weight-semibold);
     color: var(--color-gray-900);
   }
-  /* INVALIDO */
-  .form-field__input--invalid {
-    border-color: var(--color-red-400);
-  }
-  .form-field__input:focus {
+  .form-field .form-field__input:focus {
     border-color: var(--color-purple-700);
   }
   .form-field__input::placeholder {
-    font-weight: #6f6e73;
+    color: #6f6e73;
   }
   .form-field__error {
+    display: none;
     text-align: right;
     color: var(--color-red-400);
     font-size: 0.75rem;
@@ -346,9 +350,28 @@ COMPONENTS
     margin-top: var(--sp-xxs);
   }
   .form-field__error-icon {
+    display: none;
     position: absolute;
-    top: 1rem;
-    right: 2rem;
+    right: 1.7rem;
+    top: 50%;
+    translate: 0 -50%;
+  }
+  .form-field[data-state="invalid"] {
+    .form-field__input {
+      border-color: var(--color-red-400);
+    }
+    .form-field__input::placeholder {
+      color: white;
+    }
+    .form-field__input[type="email"]::placeholder {
+      color: var(--color-red-400);
+    }
+    .form-field__error {
+      display: block;
+    }
+    .form-field__error-icon {
+      display: block;
+    }
   }
 }
 
