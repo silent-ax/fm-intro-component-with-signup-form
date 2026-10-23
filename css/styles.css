@@ -252,12 +252,12 @@ COMPONENTS
     color: var(--color-white);
   }
   .signup-intro__title {
-    font-size: 3.37rem;
+    font-size: clamp(1.85rem, 6vw, 3.37rem);
   }
   .signup-intro__description {
     max-width: 35rem;
     font-weight: var(--weight-semibold);
-    font-size: 1.08rem;
+    font-size: clamp(1rem, 2vw, 1.08rem);
     color: #fee9e2;
     line-height: 1.6;
   }
@@ -279,6 +279,9 @@ COMPONENTS
     padding: var(--sp-lg) 0 1.2rem;
     box-shadow: var(--box-shadow);
   }
+  .signup-form__offer br {
+    display: none;
+  }
   .signup-form__form {
     display: flex;
     flex-direction: column;
@@ -296,7 +299,7 @@ COMPONENTS
     color: var(--color-white);
     text-transform: uppercase;
     font-weight: var(--weight-semibold);
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 2vw, 1.1rem);
     border: 1px solid hsl(154, 59%, 45%);
     box-shadow: 0 3px hsl(154, 59%, 45%);
     &:hover {
@@ -334,6 +337,7 @@ COMPONENTS
     color: var(--color-gray-900);
     font-weight: var(--weight-semibold);
     color: var(--color-gray-900);
+    font-size: clamp(0.9rem, 2vw, 1rem);
   }
   .form-field .form-field__input:focus {
     border-color: var(--color-purple-700);
@@ -397,4 +401,36 @@ RESPONSIVE
 ========================= */
 @layer responsive {
   /* - Mobile: 375px */
+  @media screen and (max-width: 376px) {
+    .signup {
+      padding-top: 6rem;
+    }
+    .signup__container {
+      flex-direction: column;
+      gap: 4rem;
+    }
+    .signup-intro {
+      width: initial;
+      gap: 1.5rem;
+    }
+    .signup-intro__title {
+      text-align: center;
+      line-height: 1.2;
+    }
+    .signup-intro__description {
+      text-align: center;
+    }
+    .signup-form__offer br {
+      display: block;
+    }
+    .signup-form__form {
+      padding: var(--sp-lg);
+    }
+    .form-field__input {
+      padding-inline: var(--sp-lg);
+    }
+    .signup-form__terms {
+      max-width: 17rem;
+    }
+  }
 }
