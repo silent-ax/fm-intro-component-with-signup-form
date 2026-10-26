@@ -429,6 +429,9 @@ RESPONSIVE
     .form-field__input {
       padding-inline: var(--sp-lg);
     }
+    .form-field__error-icon {
+      right: 1rem;
+    }
     .signup-form__terms {
       max-width: 17rem;
     }

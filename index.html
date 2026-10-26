@@ -40,11 +40,17 @@
               $20/mo. thereafter
             </p>
             <!-- Form -->
-            <form class="signup-form__form" action="#" method="post">
+            <form
+              class="signup-form__form"
+              action="#"
+              method="post"
+              data-js="form"
+              novalidate
+            >
               <!-- ========================= -->
               <!-- FORM FIELD - FIRSTNAME -->
               <!-- ========================= -->
-              <div class="form-field">
+              <div class="form-field" data-js="field">
                 <label
                   class="form-field__label visually-hidden"
                   for="first-name"
@@ -61,6 +67,7 @@
                     aria-invalid="true"
                     aria-describedby="first-name-error"
                     autocomplete="given-name"
+                    data-js="input"
                   />
                   <img
                     class="form-field__error-icon"
@@ -68,14 +75,16 @@
                     alt=""
                   />
                 </div>
-                <p class="form-field__error" id="first-name-error">
-                  First Name cannot be empty
-                </p>
+                <p
+                  class="form-field__error"
+                  id="first-name-error"
+                  data-js="error-message"
+                ></p>
               </div>
               <!-- ========================= -->
               <!-- FORM FIELD - LAST NAME -->
               <!-- ========================= -->
-              <div class="form-field">
+              <div class="form-field" data-js="field">
                 <label class="form-field__label visually-hidden" for="last-name"
                   >Last Name</label
                 >
@@ -89,6 +98,7 @@
                     aria-invalid="true"
                     aria-describedby="last-name-error"
                     autocomplete="family-name"
+                    data-js="input"
                   />
                   <img
                     class="form-field__error-icon"
@@ -96,14 +106,16 @@
                     alt=""
                   />
                 </div>
-                <p class="form-field__error" id="last-name-error">
-                  Last Name cannot be empty
-                </p>
+                <p
+                  class="form-field__error"
+                  id="last-name-error"
+                  data-js="error-message"
+                ></p>
               </div>
               <!-- ========================= -->
               <!-- FORM FIELD - EMAIL ADDRESS -->
               <!-- ========================= -->
-              <div class="form-field">
+              <div class="form-field" data-js="field">
                 <label class="form-field__label visually-hidden" for="email"
                   >Email Address</label
                 >
@@ -117,6 +129,7 @@
                     aria-invalid="true"
                     aria-describedby="email-error"
                     autocomplete="email"
+                    data-js="input"
                   />
                   <img
                     class="form-field__error-icon"
@@ -124,14 +137,16 @@
                     alt=""
                   />
                 </div>
-                <p class="form-field__error" id="email-error">
-                  Looks like this is not an email
-                </p>
+                <p
+                  class="form-field__error"
+                  id="email-error"
+                  data-js="error-message"
+                ></p>
               </div>
               <!-- ========================= -->
               <!-- FORM FIELD - PASSWORD -->
               <!-- ========================= -->
-              <div class="form-field">
+              <div class="form-field" data-js="field">
                 <label class="form-field__label visually-hidden" for="password"
                   >Password</label
                 >
@@ -145,6 +160,7 @@
                     aria-invalid="true"
                     aria-describedby="password-error"
                     autocomplete="new-password"
+                    data-js="input"
                   />
                   <img
                     class="form-field__error-icon"
@@ -152,9 +168,11 @@
                     alt=""
                   />
                 </div>
-                <p class="form-field__error" id="password-error">
-                  Password cannot be empty
-                </p>
+                <p
+                  class="form-field__error"
+                  id="password-error"
+                  data-js="error-message"
+                ></p>
               </div>
 
               <!-- Submit button -->
